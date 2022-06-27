@@ -1,0 +1,68 @@
+span.level{
+    font-weight: bold;
+}
+textarea{
+    width: 35%!important;
+    height: 100px!important;
+}
+select{
+    width: 35%!important;
+}
+input.error, select.error{
+    outline: 2px solid transparent;
+    border-radius: 4px!important;
+    border-color: #d63638!important;
+    box-shadow: 0 0 2px rgb(214 54 56 / 80%);
+}
+input.error:focus, select.error:focus{
+    outline: 2px solid transparent;
+    border-radius: 4px!important;
+    border-color: #d63638!important;
+    box-shadow: 0 0 2px rgb(214 54 56 / 80%);
+}
+input, select, textarea{
+    margin-bottom: 0!important;
+}
+input:focus, select:focus, textarea:focus{
+    border-color: #0093E9!important;
+    outline: 2px solid transparent;
+    border-radius: 4px!important;
+    box-shadow: 0 0 0 1px #0093E9;
+}
+/*ADD CAT*/
+.add-cat-page #detail-page .section-detail label{ display: block; padding-bottom: 10px; font-family: 'Roboto Medium'; font-weight: normal;}
+.add-cat-page #detail-page .section-detail input[type="text"]{
+    display: block;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    width: 35%;
+    margin-bottom: 15px;
+}
+.add-cat-page #detail-page .section-detail textarea{
+    display: block;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    width: 50%;
+    height: 150px;
+    margin-bottom: 15px;
+}
+.add-cat-page #detail-page .section-detail select{
+    display: block;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+}
+.add-cat-page #detail-page .section-detail button{
+    display: block;
+    border: none;
+    outline: none;
+    background: #4fa327;
+    color: #fff;
+    padding: 8px 20px;
+    margin-bottom: 50px;
+}
+.add-cat-page #detail-page .section-detail button:hover{ background: #3a7d19;}
+#btn-upload-thumb{ font-size: 13px; padding: 0px 10px; display: inline-block;}
+#uploadFile{ margin-bottom: 15px;}
+#uploadFile img{ margin-top: 15px; width: 150px; height: 150px; overflow: hidden; border: 1px solid #ddd;}
+

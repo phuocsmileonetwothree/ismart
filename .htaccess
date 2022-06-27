@@ -1,0 +1,44 @@
+RewriteEngine On
+
+# ------------------- INDEX.php -------------------
+RewriteRule ^([a-zA-Z]+).html$ index.php
+
+
+# ------------------- PAGE -------------------
+RewriteRule ^page/([a-zA-Z0-9_-]+)-([0-9]+)$ index.php?mod=page&controller=index&action=detail&id=$2
+
+# ------------------- PRODUCT -------------------
+    # category product - post all
+RewriteRule ^category-product/all$ index.php?mod=product&controller=index&action=index&cat_id=0 [QSA]
+RewriteRule ^category-post/all$ index.php?mod=post&controller=index&action=index&cat_id=0 [QSA]
+    # category product - post by cat_id
+RewriteRule ^category-product/([a-zA-Z0-9\._-]+)-([0-9]+)$ index.php?mod=product&controller=index&action=index&cat_id=$2 [QSA]
+RewriteRule ^category-post/([a-zA-Z0-9\._-]+)-([0-9]+)$ index.php?mod=post&controller=index&action=index&cat_id=$2 [QSA]
+    # detail product - dertail post
+RewriteRule ^product/([a-zA-Z0-9\._-]+)-([0-9]+)$ index.php?mod=product&controller=index&action=detail&id=$2
+RewriteRule ^post/([a-zA-Z0-9\._-]+)-([0-9]+)$ index.php?mod=post&controller=index&action=detail&id=$2
+    # search product
+RewriteRule ^search/(.*)$ index.php?mod=product&controller=index&action=search&key=$1 [QSA]
+
+
+
+
+# ------------------- CART -------------------
+    # index(show) cart
+RewriteRule ^cart/$ index.php?mod=cart&controller=index&action=index
+
+    # add cart
+RewriteRule ^add/([a-zA-Z0-9\._-]+)-([0-9]+)(.*)$ index.php?mod=cart&controller=index&action=add&id=$2&qty=$3 [QSA]
+
+    # checkout cart none product id
+RewriteRule ^checkout/$ index.php?mod=cart&controller=index&action=checkout
+    # checkout cart product id
+RewriteRule ^checkout/buy-now-([0-9]+)$ index.php?mod=cart&controller=index&action=checkout&id=$1
+
+    # thank cart
+RewriteRule ^thanks/$ index.php?mod=cart&controller=index&action=thanks
+
+    # delete cart
+RewriteRule ^delete/([a-zA-Z0-9\._-]+)-([0-9]+)$ index.php?mod=cart&controller=index&action=delete&id=$2
+    # delete_all cart
+RewriteRule ^delete_all/$ index.php?mod=cart&controller=index&action=delete_all
